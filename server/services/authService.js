@@ -12,7 +12,7 @@ module.exports.checkPassword = async (password, dbPassword) => {
 };
 
 module.exports.createToken = (user) => {
-  return jwt.sign({ id: user._id, name: user.name }, MY_STRONG, {
+  return jwt.sign({user}, MY_STRONG, {
     expiresIn: "7d",
   });
 };

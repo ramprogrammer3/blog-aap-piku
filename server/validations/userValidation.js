@@ -9,8 +9,6 @@ module.exports.registerValidation = [
     .escape()
     .withMessage("Email is required"),
   body("password")
-    .not()
-    .isEmpty()
     .isLength({ min: 8 })
     .withMessage("password must be 8 character"),
 ];

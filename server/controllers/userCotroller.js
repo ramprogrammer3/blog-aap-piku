@@ -55,7 +55,7 @@ module.exports.login = async (req, res) => {
       } else {
         return res
           .status(401)
-          .json({ errors: [{ msg: "email does not exits" }] });
+          .json({ errors: [{ msg: "user does not found with this eamil" }] });
       }
     } catch (error) {
       return res.status(500).json("internal server error");
